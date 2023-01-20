@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  app:
+    image: query_string_matcher
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: on-failure
+    ports:
+      - "8080:8080"

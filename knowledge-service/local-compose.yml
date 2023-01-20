@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  graph_db:
+    image: neo4j:latest
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    volumes:
+      - neo4j_data:/data/
+    env_file:
+      - .env.neo4j
+
+volumes:
+  neo4j_data:
